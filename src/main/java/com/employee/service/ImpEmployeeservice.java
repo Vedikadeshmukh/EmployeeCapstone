@@ -30,4 +30,16 @@ public class ImpEmployeeservice implements IEmployeeservice {
 		dto.setName(emp.getName());
 		return dto;
 	}
+
+	@Override
+	public Employee getClientEmployeeById(long id) throws EmployeeNotFound {
+		
+		Employee emp=repo.findById(id).orElse(null);
+		if(emp==null) {
+			throw new EmployeeNotFound(null);
+		}
+		
+		return emp;
+	}
+
 }

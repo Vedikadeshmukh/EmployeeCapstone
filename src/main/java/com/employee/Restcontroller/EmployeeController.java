@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.employee.DTO.EmployeeDTO;
+import com.employee.entity.Employee;
 import com.employee.exception.EmployeeNotFound;
 import com.employee.service.IEmployeeservice;
 
@@ -33,4 +34,12 @@ public class EmployeeController {
 		return service.getEmployeeById(id);
 		
 	}
+	
+	@GetMapping("/client/{id}")
+	public Employee getClientEmployeeById(@PathVariable @Valid long id) throws EmployeeNotFound {
+		return service.getClientEmployeeById(id);
+		
+	}
+	
+	
 }

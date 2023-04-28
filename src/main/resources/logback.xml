@@ -35,6 +35,4 @@
         <appender-ref ref="FILE-ROLLING"/>
     </root>
 
-  
-
 </configuration>
