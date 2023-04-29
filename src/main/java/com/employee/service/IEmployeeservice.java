@@ -8,5 +8,4 @@ public interface IEmployeeservice {
 	
 	public EmployeeDTO getEmployeeById(long id) throws EmployeeNotFound;
 	
-	public Employee getClientEmployeeById(long id)throws EmployeeNotFound;
 }

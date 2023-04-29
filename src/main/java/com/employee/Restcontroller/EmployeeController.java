@@ -35,11 +35,6 @@ public class EmployeeController {
 		
 	}
 	
-	@GetMapping("/client/{id}")
-	public Employee getClientEmployeeById(@PathVariable @Valid long id) throws EmployeeNotFound {
-		return service.getClientEmployeeById(id);
-		
-	}
 	
 	
 }
