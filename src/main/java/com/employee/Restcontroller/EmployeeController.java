@@ -25,7 +25,7 @@ public class EmployeeController {
 	IEmployeeservice service;
 	
 	@GetMapping("/fetch/{id}")
-	public EmployeeDTO getEmployeeById(@PathVariable @Valid long id) throws EmployeeNotFound{
+	public EmployeeDTO getEmployeeById(@PathVariable @Valid long id) throws Exception{
 		logger.info("[getEmployeeById] info message");
 		logger.warn("[getEmployeeById] warn message");
 		logger.debug("[getEmployeeById] debug message");

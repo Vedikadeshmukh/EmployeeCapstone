@@ -16,7 +16,7 @@ public class ImpEmployeeservice implements IEmployeeservice {
 	EmployeeRepo repo;
 	
 	@Override
-	public EmployeeDTO getEmployeeById(long id) throws EmployeeNotFound{
+	public EmployeeDTO getEmployeeById(long id) throws Exception{
 		
 		Employee emp=repo.findById(id).orElse(null);
 		if(emp==null) {

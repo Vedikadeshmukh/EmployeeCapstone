@@ -6,6 +6,6 @@ import com.employee.exception.EmployeeNotFound;
 
 public interface IEmployeeservice {
 	
-	public EmployeeDTO getEmployeeById(long id) throws EmployeeNotFound;
+	public EmployeeDTO getEmployeeById(long id) throws Exception;
 	
 }

@@ -14,4 +14,9 @@ public class GlobalException {
 		return  new ResponseEntity<>("Invalid Employee Id",HttpStatus.INTERNAL_SERVER_ERROR);
 		
 	}
+	@ExceptionHandler(NumberFormatException.class)
+	public ResponseEntity<String> handleInvalidFormantException(NumberFormatException ex){
+		return  new ResponseEntity<String>("Please enter parameters in the given format", HttpStatus.BAD_REQUEST);
+		
+	}
 }
